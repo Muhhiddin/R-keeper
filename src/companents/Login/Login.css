@@ -1,0 +1,85 @@
+.auth {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.title-keeper {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 92px;
+    line-height: 108px;
+    margin: 80px 0;
+    position: relative;
+    text-align: center;
+    color: #2B2B2B;
+}
+
+.r-line {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 92px;
+    line-height: 108px;
+    text-align: center;
+    color: #68CD66;
+}
+
+.auth-form {
+    display: grid;
+}
+
+.auth-form input {
+    text-align: center;
+    width: 360px;
+    background-color: #e3e4e1;
+    border: 0;
+    flex: 75% 1;
+    font-family: Roboto,sans-serif;
+    font-size: 20px;
+    outline: 0;
+    margin-bottom: 15px;
+    padding: 12px 2px 12px 2px;
+}
+
+::placeholder {
+    padding: 10px 10px;
+    width: 25%;
+    background: #EFF0ED;
+}
+
+.btn-login {
+    background-color: #ff2122;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    outline: 0;
+    padding: 10px 20px;
+}
+
+.spinner {
+    position: absolute;
+    display: none;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #ff2122;
+    border-bottom: 10px solid #ff2122;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
