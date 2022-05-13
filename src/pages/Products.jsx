@@ -27,13 +27,11 @@ const Products = () => {
     return (
         <Layout>
             <div className="allBar">
-                <div className="div">
-                    <Link to={'/categories'}>
-                        <img className="imgArrow"
-                             src="https://hamdloko.uz/static/media/arrow-left.76c49801d78388a0b113fd68f307cb0a.svg"
-                             alt=""/>
-                    </Link>
-                </div>
+                <Link to={'/categories'} className='d-content'>
+                    <div className="div">
+                        <div className="imgArrowNext"></div>
+                    </div>
+                </Link>
 
                 <ProductLists loading={products.loading} data={products.data}/>
             </div>

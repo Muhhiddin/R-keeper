@@ -24,12 +24,6 @@ const Basket = () => {
         }));
     }
 
-   /* let amount = 0;
-    for ( let i = 0; i < basket.length; i++) {
-        amount += products[i].price
-    }
-    console.log(amount)*/
-
     return (
         <>
             {

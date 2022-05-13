@@ -2,7 +2,6 @@ import "../Login/Login.css";
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import {apiLogin} from '../../Api';
-import {Map, YMaps, ZoomControl} from "react-yandex-maps";
 
 const Login = () => {
 
@@ -12,14 +11,10 @@ const Login = () => {
     let navigate = useNavigate();
 
       const handleClick = async () => {
-        console.log('click')
         if (login && password) {
             setLoading(true);
             try {
-
                 const response = await apiLogin({login, password});
-
-                console.log(response.data)
                 setLoading(false);
                 if (response.data.token) {
                     localStorage.setItem('token', response.data.token);
@@ -30,16 +25,6 @@ const Login = () => {
                     }));
                     navigate('/');
                 }
-
-                /*const responseData = await response.json();
-                if (responseData.error) {
-                    throw responseData.error
-                }
-                if (responseData.token) {
-                    localStorage.setItem('token', responseData.token);
-                    localStorage.setItem('email', password);
-                    navigate('/');
-                }*/
             } catch (e) {
                 alert(e)
             }

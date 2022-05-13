@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const API_URL = 'https://hamd.loko.uz/api';
-//
 
 export const apiLogin = async ({login, password}) => {
     const response = await axios.post(`${API_URL}/operator/sign-in`, {
@@ -25,6 +24,23 @@ export const callApi = async () => {
     return response.data;
 }
 
+export const AllOrderApi = async () => {
+    const response = await axios.get(`${API_URL}/operator/orders`);
+
+    return response.data;
+}
+
+export const AcceptOrderApi = async (orderId) => {
+    const response = await axios.get(`${API_URL}/operator/orders?status=${orderId}`);
+
+    return response.data;
+}
+
+axios(AllOrderApi)
+    .then(function (response) {
+    })
+    .catch(function (error) {
+    });
 
 
 export default categories;

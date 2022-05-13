@@ -23,13 +23,11 @@ const Categories = () => {
     return (
         <Layout>
             <div className="allBar">
-                <div className="div">
-                    <Link to={'/'}>
-                    <img className="imgArrow"
-                         src="https://hamdloko.uz/static/media/arrow-left.76c49801d78388a0b113fd68f307cb0a.svg"
-                         alt=""/>
-                    </Link>
-                </div>
+                <Link to={'/'} className='d-content'>
+                    <div className="div">
+                        <div className="imgArrowNext"></div>
+                    </div>
+                </Link>
 
                 <CategoryLists loading={categoryList.loading} data={categoryList.data} />
             </div>
